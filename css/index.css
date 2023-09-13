@@ -13,18 +13,22 @@
 :root::before,
 :root::after {
    font-family: sans-serif;
+   --section-min-width: 300px;
 }
 
-a {
+.logo-img-section a {
    text-decoration: underline;
    color: #FFFEFE;
 }
 
+.form-prompt-section a {
+   text-decoration: none;
+   color: #596D48;
+}
+
 body {
    display: flex;
-   flex-direction: row;
-
-   height: 100vh;
+   flex-flow: row wrap;
 }
 
 .logo-img-section {
@@ -32,16 +36,17 @@ body {
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
-
+   
    flex: 2;
-
+   
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: flex-end;
+   height: 100vh;
 
    position: relative;
-   min-width: 300px;
+   min-width: var(--section-min-width);
 }
 
 .logo-banner {
@@ -83,7 +88,7 @@ body {
    display: flex;
    flex-direction: column;
 
-   min-width: 300px;
+   min-width: var(--section-min-width);
 
    background-color: #F9FAFB;
 }
@@ -92,11 +97,57 @@ body {
 .form-prompt-section form,
 .form-prompt-section .prompt-footer {
    flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+
+   padding: 3ch 3rem;
+}
+
+.form-prompt-section .prompt {
+   justify-content: flex-end;
+   align-items: flex-start;
+   gap: 2rem;
+}
+
+.form-prompt-section .prompt > h3 {
+   width: max(var(--section-min-width), 80%);
 }
 
 .form-prompt-section form {
    background-color: white;
    box-shadow: 0px 5px 5px rgb(224, 224, 224), 0px -2px 2px rgb(240, 240, 240);
+   gap: 1.5rem;
+}
+
+.form-prompt-section .form-row {
+   display: flex;
+   flex-flow: row wrap;
+   gap: 3rem;
+}
+
+.form-prompt-section .form-unit {
+   display: flex;
+   flex-direction: column;
+}
+
+.form-prompt-section .prompt-footer {
+   gap: 2rem;
+}
+
+.form-prompt-section .prompt-footer {
+   font-weight: bold;
+}
+
+.form-prompt-section .prompt-footer button {
+   font-weight: inherit;
+   font-size: 1.2rem;
+   background-color: #596D48;
+   color: white;
+   padding: 1rem 4rem;
+   border: none;
+   border-radius: 10px;
+   box-shadow: 5px 3px 5px rgb(224, 224, 224);
 }
 
 /* troubleshooting */

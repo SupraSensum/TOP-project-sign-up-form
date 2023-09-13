@@ -12,6 +12,7 @@
          <img src="./images/odin-lined.png" alt="the odin project logo">
          <h1>ODIN</h1>
       </div>
+      
       <p class="photo-credit">
          Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       </p>
@@ -21,32 +22,48 @@
          <h3>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</h3>
          <h3>You <em>know</em> you want to.</h3>
       </div>
+      
       <form action="" method="post" id="sign-up-form">
          <h3>Let's do this!</h3>
 
          <div class="form-row">
-            <label for="user-first">FIRST NAME</label>
-            <input type="text" name="user-first" id="user-first">
+            <div class="form-unit">
+               <label for="user-first">FIRST NAME</label>
+               <input type="text" name="user-first" id="user-first">
+            </div>
 
-            <label for="user-last">LAST NAME</label>
-            <input type="text" name="user-last" id="user-last">
+            <div class="form-unit">
+               <label for="user-last">LAST NAME</label>
+               <input type="text" name="user-last" id="user-last">
+            </div>
          </div>
-         <div class="form-row">
-            <label for="user-email">EMAIL</label>
-            <input type="email" name="user-email" id="user-email">
 
-            <label for="user-tel">PHONE NUMBER</label>
-            <input type="tel" name="user-tel" id="user-tel">
+         <div class="form-row">
+            <div class="form-unit">
+               <label for="user-email">EMAIL</label>
+               <input type="email" name="user-email" id="user-email">
+            </div>
+
+            <div class="form-unit">
+               <label for="user-tel">PHONE NUMBER</label>
+               <input type="tel" name="user-tel" id="user-tel">
+            </div>
          </div>
-         <div class="form-row">
-            <label for="user-pass">PASSWORD</label>
-            <input type="password" name="user-pass" id="user-pass">
-            <span class="passwords-match-error"></span>
 
-            <label for="user-pass-confirmation">CONFIRM PASSWORD</label>
-            <input type="password" name="user-pass-confirmation" id="user-pass-confirmation">
+         <div class="form-row">
+            <div class="form-unit">
+               <label for="user-pass">PASSWORD</label>
+               <input type="password" name="user-pass" id="user-pass">
+               <span class="passwords-match-error"></span>
+            </div>
+
+            <div class="form-unit">
+               <label for="user-pass-confirmation">CONFIRM PASSWORD</label>
+               <input type="password" name="user-pass-confirmation" id="user-pass-confirmation">
+            </div>
          </div>
       </form>
+
       <div class="prompt-footer">
          <button id="sign-up-form-button" form="sign-up-form">Create Account</button>
          <p>
