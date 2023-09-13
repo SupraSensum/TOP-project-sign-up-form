@@ -5,6 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>TOP: Sign-up Form</title>
    <link rel="stylesheet" href="./css/index.css">
+   <script src="./scripts/password-logic.js" defer></script>
 </head>
 <body>
    <div class="logo-img-section">
@@ -12,7 +13,7 @@
          <img src="./images/odin-lined.png" alt="the odin project logo">
          <h1>ODIN</h1>
       </div>
-      
+
       <p class="photo-credit">
          Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       </p>
@@ -26,40 +27,36 @@
       <form action="" method="post" id="sign-up-form">
          <h3>Let's do this!</h3>
 
-         <div class="form-row">
+         <div class="form-controls">
             <div class="form-unit">
                <label for="user-first">FIRST NAME</label>
-               <input type="text" name="user-first" id="user-first">
+               <input type="text" name="user-first" id="user-first" required>
             </div>
 
             <div class="form-unit">
                <label for="user-last">LAST NAME</label>
-               <input type="text" name="user-last" id="user-last">
+               <input type="text" name="user-last" id="user-last" required>
             </div>
-         </div>
-
-         <div class="form-row">
+            
             <div class="form-unit">
                <label for="user-email">EMAIL</label>
-               <input type="email" name="user-email" id="user-email">
+               <input type="email" name="user-email" id="user-email" required>
             </div>
-
+            
             <div class="form-unit">
                <label for="user-tel">PHONE NUMBER</label>
-               <input type="tel" name="user-tel" id="user-tel">
+               <input type="tel" name="user-tel" id="user-tel" required>
             </div>
-         </div>
-
-         <div class="form-row">
+            
             <div class="form-unit">
                <label for="user-pass">PASSWORD</label>
-               <input type="password" name="user-pass" id="user-pass">
-               <span class="passwords-match-error"></span>
+               <input type="password" name="user-pass" id="user-pass" class="error" required>
+               <span class="passwords-match-error">* Passwords do no match</span>
             </div>
-
+            
             <div class="form-unit">
                <label for="user-pass-confirmation">CONFIRM PASSWORD</label>
-               <input type="password" name="user-pass-confirmation" id="user-pass-confirmation">
+               <input type="password" name="user-pass-confirmation" id="user-pass-confirmation" class="error" required>
             </div>
          </div>
       </form>

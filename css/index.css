@@ -115,20 +115,51 @@ body {
 }
 
 .form-prompt-section form {
+   flex: 0 1 auto;
+   justify-content: center;
+   gap: 1.5rem;
+
    background-color: white;
    box-shadow: 0px 5px 5px rgb(224, 224, 224), 0px -2px 2px rgb(240, 240, 240);
-   gap: 1.5rem;
 }
 
-.form-prompt-section .form-row {
+.form-prompt-section .form-controls {
    display: flex;
    flex-flow: row wrap;
-   gap: 3rem;
+   gap: 2ch;
+
+   max-width: 650px;
 }
 
 .form-prompt-section .form-unit {
    display: flex;
    flex-direction: column;
+   
+   width: clamp(200px, 40%, 325px);
+   margin-right: 2ch;
+}
+
+.form-prompt-section label {
+   font-size: 0.7rem;
+   font-weight: bold;
+   letter-spacing: 0.15ch;
+   margin-bottom: 0.2ch;
+
+   color: #1F2937;
+}
+
+.form-prompt-section input {
+   appearance: none;
+   outline: none;
+
+   padding: 0.5ch 1ch;
+   border: 2px solid #E5E7EB;
+   border-radius: 4px;
+}
+
+.form-prompt-section input:focus {
+   border: 2px solid #1E5CD9;
+   box-shadow: 5px 3px 5px rgb(224, 224, 224);
 }
 
 .form-prompt-section .prompt-footer {
@@ -148,6 +179,27 @@ body {
    border: none;
    border-radius: 10px;
    box-shadow: 5px 3px 5px rgb(224, 224, 224);
+   transition: scale 0.1s;
+}
+
+.form-prompt-section .prompt-footer button:hover {
+   cursor: pointer;
+   scale: 1.05;
+}
+
+.form-controls .form-unit .error {
+   border: 2px solid #d62424;
+}
+
+.form-controls .form-unit .match {
+   border: 2px solid #596D48;
+}
+
+.form-unit span {
+   color: #d62424;
+   font-size: 0.7rem;
+   font-weight: bold;
+   height: 1rem;
 }
 
 /* troubleshooting */
